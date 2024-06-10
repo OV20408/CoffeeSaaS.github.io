@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Coffee & Tea</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Playfair Display", serif;
+            font-style: normal;
+        }
+
+        body{
+            background-color: #ffe6a7;
+            height: 100vh;
+        }
+
+        .header-class{
+            background-color: #6f1d1b;
+            height: 8rem;
+            padding: 1rem;
+            color: #fff;
+            display: flex; 
+            align-items: center; 
+        }
+
+        .header-class h1{
+            display: inline;
+        }
+
+        .header-class a{
+            padding-right: 7rem;
+        }
+
+        .header-class a img{
+            height: 8rem;
+            display: inline;
+        }
+
+        /* Link Style Part - navbar */
+        .navbar{
+            display: inline;
+            font-size: 1.5rem;
+        }
+
+        .navbar a{
+            padding-right: 20rem;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .navbar a:hover{
+            color: #bb9457;
+        }
+
+        .login-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 8rem);
+        }
+
+        .login-box{
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px #432818;
+            text-align: center;
+        }
+
+        .login-box h2{
+            color: #6f1d1b;
+            margin-bottom: 1rem;
+        }
+
+        .login-box form{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-box input{
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #432818;
+            border-radius: 0.25rem;
+        }
+
+        .login-box button{
+            background-color: #bb9457;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .login-box button:hover{
+            background-color: #432818;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-class">
+        <a href="index.html">
+            <img src="WhatsApp_Image_2024-06-08_at_18.01.29-removebg-preview.png" alt="logo"/>
+        </a>
+        <nav class="navbar">
+            <a href="contacto.html">Contacto</a>
+            <a href="precios.html">Precios</a>
+            <a href="productos.html">Productos</a>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Iniciar Sesión</h2>
+            <form action="process.php" method="post">
+                <input type="text" name="username" placeholder="Correo electrónico" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

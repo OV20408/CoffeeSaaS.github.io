@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee & Tea - Productos de Cafe</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Playfair Display", serif;
+            font-style: normal;
+        }
+
+        body{
+            height: 150rem;
+        }
+
+        .header-class{
+            background-color: #6f1d1b;
+            height: 8rem;
+            padding: 1rem;
+            color: #fff;
+            display: flex; 
+            align-items: center; 
+        }
+
+        .header-class h1{
+            display: inline;
+        }
+
+        .header-class a{
+            padding-right: 7rem;
+        }
+
+        .header-class a img{
+            height: 8rem;
+            display: inline;
+        }
+
+        /* Link Style Part - navbar */
+        .navbar{
+            display: inline;
+            font-size: 1.5rem;
+        }
+
+        .navbar a{
+            padding-right: 8rem;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .navbar a:hover{
+            color: #bb9457;
+        }
+
+        /* Body part */
+        .main-title{
+            font-size: 4rem;
+            text-align: center;
+            color: #432818;
+        }
+
+        .section-one{
+            display: flex;
+            background-color: #ffe6a7;
+            padding: 1.2rem;
+            height: 42rem;
+            text-align: center;
+            font-size: 1.5rem;
+            align-items: center;
+        }
+
+        .section-one-text {
+            text-align: left;
+            padding-right: 16rem;
+            padding-left: 2rem;
+        }
+
+        .section-one img {
+            height: 20rem;
+        }
+
+        .section-one button{
+            background-color: #bb9457;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .section-one button:hover{
+            background-color: #432818;
+        }
+
+        .section-two{
+            text-align: center;
+            color: #99582a;
+            margin: 2rem;
+            font-size: 1.2rem;
+            height: 45rem;
+        }
+
+        .wrap{
+            display: grid;
+            margin-top: 2rem;            
+        }
+
+        .wrap ul {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .wrap li {
+            height: 30rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px #432818;
+            text-align: center;
+        }
+
+        .wrap li a {
+            text-decoration: none;
+        }
+
+        .wrap li h3 {
+            color: #6f1d1b;
+        }
+        
+        .section-three{
+            text-align: center;
+        }
+
+         /* Estilos del acordeón y Section-three */
+         .accordion {
+            margin: 2rem;
+            padding: 1rem;
+            border: 1px solid #99582a;
+            border-radius: 0.5rem;
+            background-color: #fff;
+        }
+
+        details {
+            margin-bottom: 1rem;
+        }
+
+        summary {
+            background-color: #432818;
+            color: #fff;
+            cursor: pointer;
+            padding: 1rem;
+            font-size: 1.2rem;
+            border-radius: 0.5rem;
+            list-style: none;
+            outline: none;
+        }
+
+        summary:hover {
+            background-color: #99582a;
+        }
+
+        details[open] summary {
+            background-color: #bb9457;
+        }
+
+        details p {
+            margin: 1rem 0 0 1rem;
+            color: #432818;
+        }
+
+
+        .section-four {
+            height: 46rem;
+            display: flex;
+            background-color: #99582a;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            color: #ffff; 
+        }
+
+        .section-four > div {
+            flex: 1;
+            padding: 1rem;
+        }
+
+        .section-four img {
+            height: 30rem;
+            padding-left: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .section-four h2 {
+            color: #6f1d1b; 
+        }
+
+        .section-four p {
+            color: #ffff;
+        }
+
+        .section-four button {
+            background-color: #bb9457;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .section-four button:hover {
+            background-color: #432818;
+        }
+
+
+        footer {
+            background-color: #6f1d1b; 
+            color: #fff; 
+            padding: 3rem 1rem; 
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        footer div {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        footer h2 {
+            color: #bb9457; 
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }    
+
+       
+
+    </style>    
+</head>
+<body>
+    <header class="header-class">
+        <a href="index.html">
+            <img src="WhatsApp_Image_2024-06-08_at_18.01.29-removebg-preview.png" alt="logo"/>
+        </a>
+        <nav class="navbar">
+            <a href="#servicios">Servicios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="precios.html">Precios</a>
+            <a href="productos.html">Productos</a>
+            <a href="#acerca" >Acerca</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section class="section-one">
+                <div class="section-one-text">
+                    <h1 class="main-title">Bienvenido a Coffee and Tea</h1>
+                    <p>Una de las Herramientas para poder administrar tu cafe..</p>
+                    <button onclick="location.href='register.html'">Empezar</button>
+                    <button onclick="location.href='login.html'">Ingresar</button>
+                                    </div>    
+                <div class="image-one">
+                    <img src="360_F_143059088_90vfQGilFGf81yGr5wBf2BB8Fczm60q6-removebg-preview.png" alt="imagen">
+                </div>
+            </section>
+
+            <section class="section-four" id="acerca">
+                <div>
+                    <h2>Nuestra Historia</h2>
+                    <p>
+                        Somos un grupo de estudiantes de tercer semestre de ingenieria en sistemas, tratando de desarollar un SaaS
+                        para que los dueños de cafes puedan administrar sus negocios de manera eficiente.
+                        
+                    </p>
+                    <br>
+                    <p>
+                        Comenzamos siendo un grupo de tres personas, sin embargo, con nuestra excelente guia de nuestro docente, esperamos ser uno de los SaaS enfocado al Cafe mas utiles de la universidad. jeje
+                    </p>
+                    <button>Mas</button>
+                </div>
+                <div>
+                    <img src="https://img.freepik.com/premium-photo/cup-coffee-with-latte-art-rim_865967-7816.jpg" alt="Coffee Image">
+                </div>
+                <div>
+                    <h2>Nuestra Visión</h2>
+                    <p>
+                        Nuestra visión es ser el SaaS más confiable y eficiente para los dueños
+                        de cafes, brindandoles herramientas para administrar sus negocios de manera
+                        efectiva y eficiente.
+                    </p>
+                    <ul>
+                        <li>✔ Lorem ipsum dolor sit amet</li>
+                        <li>✔ Lorem ipsum dolor sit amet</li>
+                        <li>✔ Lorem ipsum dolor sit amet</li>
+                    </ul>
+                    <button>Mas</button>
+                </div>
+            </section>
+            
+
+            <section class="section-two" id="servicios">
+                <h2>Ventajas del Servicio</h2>
+                <div>
+                    <p>
+                        En la actualidad, Coffee & Tea es un SaaS, conocido mas que todo por los distribución de software donde el soporte lógico y los respectivos datos que maneja se alojan en los servidores de un proveedor, cuyo acceso es a través de Internet
+                    </p>
+                    <br>
+                    <p>
+                        En si en lo que nos basamos es en proporcionar a diversas empresas de Cafe a usar nuestra plataforma de comercialización, para que puedan distribuir su producto sin la necesidad de que gasten de manera exagerada 
+                    </p>
+                </div>
+                <div class="wrap">
+                    <ul>
+                        <li>
+                            <h3>Productos de Alta Calidad</h3>
+                            <p>Realiza pedidos de la mas alta Calidad para ti en cualquier momento</p>
+                            <p>70911188</p>
+                            <p><a href="mailto:omarvelasco@gmail.com">Mas Información</a></p>
+                            <div>
+                                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTMl0LyTt3TtSo7OQzwXZ4-n2l6Gi5mlTEFR9H_Vgt5jp5dBQk6" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Gestión Integral</h3>
+                            <p>Administra todas las áreas de tu negocio de café en una sola plataforma.</p>
+                            <p>Inventario, ventas, producción y más.</p>
+                            <div>
+                                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSS9ddeh2BvMB1AXBxWHRkj2hLP488N1S8ePzZzBHZRfgMQ-24B" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Analítica Avanzada</h3>
+                            <p>Obtén información valiosa sobre tu negocio con análisis detallados.</p>
+                            <p>Identifica tendencias, optimiza procesos y toma decisiones informadas.</p>
+                            <div>
+                                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQXDIMr6rQf2ytzr5bco4YLrdn3n3Iw-Y_N8FY1LjV5DAKRLTGF" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Experiencia Personalizada</h3>
+                            <p>Nuestra plataforma se adapta a las necesidades específicas de tu negocio de café.</p>
+                            <p>Configura las funciones según tus requerimientos.</p>
+                            <div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwArRRo3wOpyeJ9-nz46jMgcPh1SLLqQQsW7lst0N1jKlZzd9d" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>            
+            </section>
+
+            <section class="section-three">
+                <h2>Preguntas Frecuentes</h2>
+                <div class="accordion">
+                    <details>
+                        <summary>¿Qué es Coffee & Tea y cómo funciona?</summary>
+                        <p>Coffee & Tea es una plataforma de comercio electrónico que permite a los usuarios crear su propia tienda en línea y vender productos en ella. Proporciona una variedad de herramientas para gestionar inventarios, pagos y envíos.</p>
+                    </details>
+                    <details>
+                        <summary>¿Cuánto cuesta Coffee & Tea?</summary>
+                        <p>Coffee & Tea ofrece varios planes de precios, comenzando desde $29 al mes para el plan básico, hasta $299 al mes para el plan avanzado. También hay una opción para empresas con necesidades personalizadas llamada Shopify Plus.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo usar mi propio nombre de dominio con Coffee & Tea?</summary>
+                        <p>Sí, puedes usar tu propio nombre de dominio con Coffee & Tea. Puedes comprar un dominio directamente a través de Shopify o conectar uno que ya poseas.</p>
+                    </details>
+                    <details>
+                        <summary>¿Necesito ser diseñador o desarrollador para usar Coffee & Tea?</summary>
+                        <p>No, no necesitas ser diseñador o desarrollador para usar Coffee & Tea. La plataforma está diseñada para ser fácil de usar para todos, aunque tener conocimientos en diseño y desarrollo puede ayudarte a personalizar tu tienda aún más.</p>
+                    </details>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        
+        <div>
+            <h2>Sigue Nuestras Redes</h2>
+        </div>
+        <div>
+            <h2></h2>
+        </div>
+        <p>
+            &copy; 2022 Coffee & Tea. All rights reserved.
+        </p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const detailsElements = document.querySelectorAll('details');
+            detailsElements.forEach((targetDetail) => {
+                targetDetail.addEventListener('click', () => {
+                    detailsElements.forEach((detail) => {
+                        if (detail !== targetDetail) {
+                            detail.removeAttribute('open');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

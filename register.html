@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Coffee & Tea</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Playfair Display", serif;
+            font-style: normal;
+        }
+
+        body{
+            background-color: #ffe6a7;
+            height: 100vh;
+        }
+
+        .header-class{
+            background-color: #6f1d1b;
+            height: 8rem;
+            padding: 1rem;
+            color: #fff;
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 0.5rem;
+
+        }
+
+        .header-class h1{
+            display: inline;
+        }
+
+        .header-class a{
+            padding-right: 7rem;
+        }
+
+        .header-class a img{
+            height: 8rem;
+            display: inline;
+        }
+
+        /* Link Style Part - navbar */
+        .navbar{
+            display: inline;
+            font-size: 1.5rem;
+        }
+
+        .navbar a{
+            padding-right: 20rem;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .navbar a:hover{
+            color: #bb9457;
+        }
+
+        .register-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 37rem;
+        }
+
+        .register-box{
+            background-color: #fff;
+            padding: 1.7rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px #432818;
+            text-align: center;
+        }
+
+        .register-box h2{
+            color: #6f1d1b;
+            margin-bottom: 1rem;
+        }
+
+        .register-box form{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .register-box input{
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #432818;
+            border-radius: 0.25rem;
+        }
+
+
+
+        .register-box button{
+            background-color: #bb9457;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .register-box button:hover{
+            background-color: #432818;
+        }
+
+        select{
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-class">
+        <a href="index.html">
+            <img src="WhatsApp_Image_2024-06-08_at_18.01.29-removebg-preview.png" alt="logo"/>
+        </a>
+        <nav class="navbar">
+            <a href="contacto.html">Contacto</a>
+            <a href="precios.html">Precios</a>
+            <a href="productos.html">Productos</a>
+        </nav>
+    </header>
+
+    <div class="register-container">
+        <div class="register-box">
+            <h2>Registrar Cuenta</h2>
+            <form action="process.php" method="post">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="text" name="apellido" placeholder="Apellido" required>
+                <select name="usuario" id="usuario">
+                    <option value="cliente">Cliente</option>
+                    <option value="empleado">Empleado</option>
+                </select>
+                <input type="number" name="CI" placeholder="CI" required>
+                <input type="date" name="fecha_nac" placeholder="Fecha de Nacimiento" required>
+                <input type="email" name="correo_electronico" placeholder="Correo electrónico" required>
+                <input type="text" name="telefono" placeholder="Teléfono" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="number" name="id_empresa" placeholder="ID de la Empresa" required min="0">
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
